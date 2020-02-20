@@ -24,7 +24,7 @@ const PersonLists = () => {
     ]
     
     const personLists = persons.map(person => (
-        <List person = {person} />
+        <List key = {person.id} person = {person} />
     ))
     
     return (
