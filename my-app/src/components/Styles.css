@@ -14,6 +14,10 @@
     font-size: 1rem;
 }
 
+.font-xl {
+    font-size: 2rem;
+}
+
 .listStyle {
     list-style-type: square;
 }

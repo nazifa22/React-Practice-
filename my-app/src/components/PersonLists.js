@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './List';
 
 const PersonLists = () => {
     const persons = [
@@ -22,10 +23,8 @@ const PersonLists = () => {
         }
     ]
     
-    const personLists = persons.map(persons => (
-        <p>
-            Hi! I am {persons.name}. I am {persons.age} years old and I am skilled at {persons.skill}
-        </p>  
+    const personLists = persons.map(person => (
+        <List person = {person} />
     ))
     
     return (

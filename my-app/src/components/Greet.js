@@ -1,4 +1,5 @@
 import React from 'react';
+import Style from './AppStyles.module.css';
 
 // const Greet = (props) => <p><i>Created a new file called {props.fileName}</i></p>;
 
@@ -23,7 +24,7 @@ const Greet = props => {
     
     return (
         <div>
-            <i>Created a new file called {fileName}</i>
+            <i className = {Style.yellowGreen}>Created a new file called {fileName}</i>
         </div>
     )
 }

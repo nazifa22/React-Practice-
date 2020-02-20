@@ -14,6 +14,9 @@ import ChildComponent from './components/ChildComponent';
 import UserGritting from './components/UserGretting';
 import ListRendering from './components/ListRendering';
 import PersonList from './components/PersonLists';
+import './components/Greet.css';
+import ModuleStyles from './components/AppStyles.module.css';
+import CssModules from './components/CssModules';
 
 function App() {
   return (
@@ -21,7 +24,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello World!
+          <i className = {ModuleStyles.yellowGreen}>Hello World!</i>
         </p>
         <a
           className="App-link"
@@ -35,7 +38,7 @@ function App() {
       <section className="container">
         <Greet fileName = 'Greet.js'/>
         <Welcome />
-        <Welcome name = 'Danial' />
+        <Welcome name = 'Danial'/>
         <Welcome name = 'Sara' />
         <Hello color = {true}/>
         <Hello name = 'Danial' />
@@ -50,6 +53,7 @@ function App() {
         <UserGritting />
         <ListRendering />
         <PersonList />
+        <CssModules />
       </section>
     </div>
   );
