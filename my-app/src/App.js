@@ -17,6 +17,7 @@ import PersonList from './components/PersonLists';
 import './components/Greet.css';
 import ModuleStyles from './components/AppStyles.module.css';
 import CssModules from './components/CssModules';
+// import Form from './components/Form';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <ListRendering />
         <PersonList />
         <CssModules />
+        {/* <Form /> */}
       </section>
     </div>
   );
