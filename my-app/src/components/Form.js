@@ -20,8 +20,8 @@ const styles = {
         borderRadius: '4px',
         
         ':hover': {
-            backgroundColor: 'rgb(0, 159, 255)',
-            color: '#000'
+            backgroundColor: 'f00',
+            color: '#fff'
         }
     },
     
@@ -37,11 +37,11 @@ class Form extends Component {
         super();
         this.state = {
             userName: 'Username',
-            password: ''
+            password: 'Password'
         }
     }
     
-    getUsername = (event) => {
+    getUsername(event) {
         this.setState ({
             userName: event.target.value
         })
@@ -60,18 +60,21 @@ class Form extends Component {
     
     render(){
         return (
-            <form onSubmit = {this.submitEvent}>
-                <fieldset>
-                    <legend>Login:</legend>
-                    <label>Username:</label>
-                    <input onChange = {this.getUsername} style = {styles.input} type="text" placeholder = {this.state.userName} />
-                    <br/> 
-                    <label>Password:</label>
-                    <input onChange = {this.getPassword} style = {styles.input} type="password" placeholder = {this.state.password}/>
-                    <br/> 
-                    <input type="submit" value="Submit" style = {styles.button} />
-                </fieldset>
-            </form>
+            <div>
+                <form onSubmit = {this.submitEvent}>
+                    <fieldset>
+                        <legend>Login:</legend>
+                        <label>Username:</label>
+                        <input onChange = {this.getUsername.bind(this)} style = {styles.input} type="text" placeholder = {this.state.userName} />
+                        <br/> 
+                        <label>Password:</label>
+                        <input onChange = {this.getPassword.bind(this)} style = {styles.input} type="password" placeholder = {this.state.password}/>
+                        <br/> 
+                        <input type="submit" value="Submit" style = {styles.button} />
+                    </fieldset>
+                </form>
+                <p>Username: {this.state.userName} &nbsp; Password: {this.state.password}</p>
+            </div>
         )
     }
 }

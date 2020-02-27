@@ -6,7 +6,10 @@ import FunctionClick from './components/FunctionClick'
 import Form from './components/Form';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <App />, 
+    document.getElementById('root')
+);
 
 ReactDOM.render(<FunctionClick />, document.getElementById('wrapper'));
 
