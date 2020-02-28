@@ -57,7 +57,6 @@ function App() {
         <PersonList />
         <CssModules />
         {/* <Form /> */}
-        <Session/>
       </section>
     </div>
   );

@@ -1,0 +1,14 @@
+.button-outline {
+    border: 1px solid #634cd2;
+    background-color: transparent;
+    padding: 15px;
+    color: #634cd2;
+}
+
+.button-filled {
+    border: 1px solid #634cd2;
+    background-color: #634cd2;
+    padding: 15px;
+    color: #fff;
+margin: 20px 0;
+}
