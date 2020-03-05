@@ -19,6 +19,7 @@ import ModuleStyles from './components/AppStyles.module.css';
 import CssModules from './components/CssModules';
 import Session from './components/Session';
 // import Form from './components/Form';
+import Fragment from './components/Fragment';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <PersonList />
         <CssModules />
         {/* <Form /> */}
+        <Fragment />
       </section>
     </div>
   );

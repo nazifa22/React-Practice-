@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ListRendering = () => {
-    const names = ['Jhon', 'Sara', 'Jennifer', 'Richel']
-    const nameLists  = names.map(name => <p>{name}</p>)
+    const names = ['Jhon', 'Sara', 'Mak', 'Danial']
+    const nameList = names.map(name => <td>{name}</td>)
     
     return (
         // <div>
@@ -13,11 +13,11 @@ const ListRendering = () => {
         //     </p>
         // </div>
         
-        <div style = {{fontStyle: 'italic'}}>
+        <tr style = {{fontStyle: 'italic'}}>
             {
-                nameLists
+                nameList
             }
-        </div>
+        </tr>
     )
 }
 
