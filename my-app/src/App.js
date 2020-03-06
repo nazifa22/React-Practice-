@@ -20,6 +20,7 @@ import CssModules from './components/CssModules';
 import Session from './components/Session';
 // import Form from './components/Form';
 import Fragment from './components/Fragment';
+import Temperature from './components/Temperature';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
         <CssModules />
         {/* <Form /> */}
         <Fragment />
+        <Temperature />
       </section>
     </div>
   );
