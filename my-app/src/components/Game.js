@@ -33,6 +33,23 @@ class Game extends Component {
             gameButtons: true
         })
     }
+    attack = () => {
+        this.setState({
+            playerHealth: Math.floor(Math.random() * 100) - 5,
+            monsterHealth: Math.floor(Math.random() * 100) - 2
+        })
+    }
+    specialAttack = () => {
+        this.setState({
+            playerHealth: Math.floor(Math.random() * 100) - 2,
+            monsterHealth: Math.floor(Math.random() * 100) - 10
+        })
+    }
+    heal = () => {
+        this.setState({
+            playerHealth: this.state.playerHealth + 10
+        })
+    }
     render() {
         return (
             <>
@@ -73,17 +90,17 @@ class Game extends Component {
                 </Row>
                 <Row id='gameButtons' className={this.state.gameButtons ? 'd-block' : 'd-none'}>
                     <Col span={24} style={styles.justifyCenter}>
-                        <Button id="attack" type='dashed'> 
+                        <Button id="attack" type='dashed' onClick={this.attack}> 
                             ATTACK
                         </Button>
                         &nbsp;
                         &nbsp;
-                        <Button id="special-attack" type='dashed'> 
+                        <Button id="special-attack" type='dashed' onClick={this.specialAttack}> 
                             SPECIAL ATTACK
                         </Button>
                         &nbsp;
                         &nbsp;
-                        <Button id="heal" type='dashed'> 
+                        <Button id="heal" type='dashed' onClick={this.heal}> 
                             HEAL
                         </Button>
                         &nbsp;
