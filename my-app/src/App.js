@@ -21,6 +21,8 @@ import Session from './components/Session';
 // import Form from './components/Form';
 import Fragment from './components/Fragment';
 import Temperature from './components/Temperature';
+import Game from './components/Game';
+import 'antd/dist/antd.css';
 
 function App() {
   return (

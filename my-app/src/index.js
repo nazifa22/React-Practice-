@@ -5,6 +5,7 @@ import App from './App';
 import FunctionClick from './components/FunctionClick'
 import Form from './components/Form';
 import * as serviceWorker from './serviceWorker';
+import Game from './components/Game';
 
 ReactDOM.render(
     <App />, 
@@ -16,6 +17,11 @@ ReactDOM.render(<FunctionClick />, document.getElementById('wrapper'));
 ReactDOM.render(
     <Form/>,
     document.getElementById('form')
+);
+
+ReactDOM.render (
+    <Game />,
+    document.getElementById('game')
 );
 
 // If you want your app to work offline and load faster, you can change
