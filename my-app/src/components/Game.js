@@ -25,7 +25,8 @@ class Game extends Component {
         this.state = {
             playerHealth: 100,
             monsterHealth: 100,
-            gameButtons: false
+            gameButtons: false,
+            gameEnd: false
         }
     }
     startGame = () => {
@@ -34,20 +35,70 @@ class Game extends Component {
         })
     }
     attack = () => {
-        this.setState({
-            playerHealth: Math.floor(Math.random() * 100) - 5,
-            monsterHealth: Math.floor(Math.random() * 100) - 2
-        })
+        if(this.state.playerHealth == 100 && this.state.monsterHealth == 100) {
+            this.setState({
+                playerHealth: Math.floor(Math.random() * 100),
+                monsterHealth: Math.floor(Math.random() * 100)
+            })
+        }
+        else if(this.state.playerHealth > 10 && this.state.monsterHealth > 5){
+            this.setState({
+                playerHealth: this.state.playerHealth - 10,
+                monsterHealth: this.state.monsterHealth - 5
+            })
+        }
+        else if(this.state.playerHealth > this.state.monsterHealth) {
+            alert('Player Wins!')
+        }
+        else if(this.state.playerHealth < this.state.monsterHealth)  {
+            alert('Moster Wins!')
+        }
+        
     }
     specialAttack = () => {
-        this.setState({
-            playerHealth: Math.floor(Math.random() * 100) - 2,
-            monsterHealth: Math.floor(Math.random() * 100) - 10
-        })
+        if(this.state.playerHealth == 100 && this.state.monsterHealth == 100) {
+            this.setState({
+                playerHealth: Math.floor(Math.random() * 100),
+                monsterHealth: Math.floor(Math.random() * 100)
+            })
+        }
+        else if(this.state.playerHealth > 5 && this.state.monsterHealth > 10){
+            this.setState({
+                playerHealth: this.state.playerHealth - 5,
+                monsterHealth: this.state.monsterHealth - 10
+            })
+        }
+        else if(this.state.playerHealth > this.state.monsterHealth) {
+            alert('Player Wins!')
+        }
+        else if(this.state.playerHealth < this.state.monsterHealth)  {
+            alert('Moster Wins!')
+        }
     }
     heal = () => {
+        if(this.state.playerHealth < 90) {
+            this.setState({
+                playerHealth: this.state.playerHealth + 10
+            })
+        }
+        else if(this.state.playerHealth = 100){
+            alert('Player Health can not exceed 100!')
+            this.setState({
+                playerHealth: 100
+            })
+        }
+    }
+    giveUp = () => {
+        if(this.state.playerHealth > this.state.monsterHealth) {
+            alert('Player Wins!')
+        }
+        else if(this.state.playerHealth < this.state.monsterHealth)  {
+            alert('Moster Wins!')
+        }
         this.setState({
-            playerHealth: this.state.playerHealth + 10
+            playerHealth: 100,
+            monsterHealth: 100,
+            gameButtons: false
         })
     }
     render() {
@@ -105,7 +156,7 @@ class Game extends Component {
                         </Button>
                         &nbsp;
                         &nbsp;
-                        <Button id="give-up" type='dashed'> 
+                        <Button id="give-up" type='dashed' onClick={this.giveUp}> 
                             GIVE UP
                         </Button>
                     </Col>
