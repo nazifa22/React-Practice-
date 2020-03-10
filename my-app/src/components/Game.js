@@ -45,7 +45,7 @@ class Game extends Component {
             this.setState({
                 playerHealth: this.state.playerHealth - 10,
                 monsterHealth: this.state.monsterHealth - 5
-            })
+            })  
         }
         else if(this.state.playerHealth > this.state.monsterHealth) {
             alert('Player Wins!')
