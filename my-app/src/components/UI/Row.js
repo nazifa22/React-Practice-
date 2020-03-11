@@ -3,18 +3,20 @@ import './Row.css';
 
 function Row(props) {
     let align;
-    if(props.align == 'center') {
+    if(props.align === 'center') {
         align = 'align-center'
     }
-    else if(props.align == 'bottom') {
+    else if(props.align === 'bottom') {
         align = 'align-bottom'
     }
-    if(props.align == 'top') {
+    if(props.align === 'top') {
         align = 'align-top'
     }
     
     return (
-        <div className = {`row ${align}`}></div>
+        <div className = {`row ${align}`}>
+            {props.children}
+        </div>
     )
 }
 
