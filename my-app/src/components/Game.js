@@ -48,10 +48,12 @@ class Game extends Component {
             })  
         }
         else if(this.state.playerHealth > this.state.monsterHealth) {
-            alert('Player Wins!')
+            alert('Player Wins!');
+            this.endGame ();
         }
         else if(this.state.playerHealth < this.state.monsterHealth)  {
             alert('Moster Wins!')
+            this.endGame();
         }
         
     }
@@ -69,10 +71,12 @@ class Game extends Component {
             })
         }
         else if(this.state.playerHealth > this.state.monsterHealth) {
-            alert('Player Wins!')
+            alert('Player Wins!');
+            this.endGame();
         }
         else if(this.state.playerHealth < this.state.monsterHealth)  {
-            alert('Moster Wins!')
+            alert('Moster Wins!');
+            this.endGame();
         }
     }
     heal = () => {
@@ -101,6 +105,13 @@ class Game extends Component {
             gameButtons: false
         })
     }
+    endGame = () => {
+        this.setState({
+            playerHealth: 100,
+            monsterHealth: 100
+        })
+    }
+    
     render() {
         return (
             <>
@@ -158,6 +169,11 @@ class Game extends Component {
                         &nbsp;
                         <Button id="give-up" type='dashed' onClick={this.giveUp}> 
                             GIVE UP
+                        </Button>
+                        &nbsp;
+                        &nbsp;
+                        <Button type='dashed' onClick={this.endGame.bind(this)}> 
+                            RESTART THE GAME
                         </Button>
                     </Col>
                 </Row>
