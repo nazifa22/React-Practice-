@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-top {
+    align-items: top;
+}
+
+.align-bottom {
+    align-items: bottom;
+}
