@@ -1,7 +1,7 @@
 import React from 'react';
 import './Row.css';
 
-function Row(props) {
+const Row = (props) => {
     let align;
     if(props.align === 'center') {
         align = 'align-center'
@@ -9,8 +9,11 @@ function Row(props) {
     else if(props.align === 'bottom') {
         align = 'align-bottom'
     }
-    if(props.align === 'top') {
+    else if(props.align === 'top') {
         align = 'align-top'
+    }
+    else {
+        align = ''
     }
     
     return (
