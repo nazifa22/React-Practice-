@@ -14,3 +14,15 @@
 .align-bottom {
     align-items: bottom;
 }
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.justify-center {
+    justify-content: center;
+}
