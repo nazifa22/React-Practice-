@@ -23,7 +23,7 @@ import Fragment from './components/Fragment';
 import Temperature from './components/Temperature';
 import Game from './components/Game';
 import 'antd/dist/antd.css';
-import Row from './components/UI/Row';
+// import Row from './components/UI/Row';
 
 function App() {
   return (
@@ -64,8 +64,6 @@ function App() {
         {/* <Form /> */}
         <Fragment />
         <Temperature />
-        <Row>
-        </Row>
       </section>
     </div>
   );
